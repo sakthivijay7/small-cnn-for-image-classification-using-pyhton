@@ -24,8 +24,8 @@ Train and Validation accuracy:
 
 Model training accuracy: 0.8 to 0.9 (epoch 6-9)learn good,validation accuracy: reached 1.0 by after epoch 5.
 Model save in h5(Hierarchical dataformat5)
-Model prediction:
 
+Model prediction:
 Streamlit small UI for prediction;
 ![Capture](https://github.com/user-attachments/assets/c1c7bd24-031b-4212-a19a-2c293a5c3179)
 
