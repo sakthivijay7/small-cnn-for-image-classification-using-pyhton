@@ -23,6 +23,7 @@ image=st.file_uploader("Upload an image",type=["jpg","jpeg","png","jfif"])
 if image is not None:
   
   st.image(image,caption="Uploaded Image",use_container_width=True)
+  st.balloons()
   
   img=load_img(image,target_size=(224,224))
   img_array=img_to_array(img)/255.0
@@ -33,7 +34,10 @@ if st.button("Predict"):
     predict=model_load.predict(img_expand)
     if predict[0][0]>0.5:
       st.success("This is  Ultron \U0001F608")
+    elif predict[0][0]<0.5:
+      st.success("This is  Ironman \U0001F60E")
     else:
-      st.success("This is  Ironman \U0001F60E")    
+      st.error("Image not recognized")
+          
  
 
